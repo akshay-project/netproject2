@@ -1,0 +1,38 @@
+﻿@model IEnumerable<MyMovieApp.Entity.MovieShowTime>
+@{
+    ViewData["Title"] = "ShowAllMovie";
+}
+
+<h1 class="text-center">Show All Movie</h1>
+
+
+
+<hr />
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ShowId</th>
+            <th>MovieId</th>
+            <th>TheatreId</th>
+            <th>ShowTime</th>
+            <th>Date</th>
+            <th>Edit</th>
+            <th>delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ShowId</td>
+                <td>@item.MovieId</td>
+                <td>@item.TheatreId</td>
+                <td>@item.ShowTime</td>
+                <td>@item.Date</td>
+                <td><a asp-action="EditUser" asp-route-Id=@item.ShowId>Edit</a></td>
+                <td><a asp-action="Delete" asp-route-Id=@item.ShowId>Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

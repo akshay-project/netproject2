@@ -1,0 +1,43 @@
+﻿@model MyMovieApp.Entity.MovieModel;
+@{
+    ViewData["Title"] = "DeleteMovie";
+}
+
+<h1 class="text-center">Delete Movie</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label>
+            Movie Title
+        </label>
+        <input type="text" class="form-control" asp-for="MovieTitle" disabled="disabled" />
+    </div>
+
+    <div class="form-group">
+        <label>
+            Description
+        </label>
+        <input type="text" class="form-control" asp-for="MovieDescription" disabled="disabled" />
+    </div>
+
+    <div class="form-group">
+        <label>
+            Movie Type
+        </label>
+        <input type="text" class="form-control" asp-for="MovieType" disabled="disabled" />
+    </div>
+
+    
+
+    
+
+    <div class="form-group">
+        <label>
+            Movie Language
+        </label>
+        <input type="text" class="form-control" asp-for="MovieLanguage" disabled="disabled" />
+    </div>
+
+    <input type="submit" value="Delete" class="btn btn-primary" />
+    <input type="button" value="Reset" class="btn btn-primary" />
+</form>

@@ -1,0 +1,25 @@
+﻿@model MyMovieApp.Entity.ThetreModel;
+@{
+    ViewData["Title"] = "RegisterTheater";
+}
+
+<h1 class="text-center">Register Theater</h1>
+
+
+
+<form method="post">
+    <div class="form-group">
+        <label>
+            Theater Title
+        </label>
+        <input type="text" class="form-control" asp-for="Name"/>
+    </div>
+
+    
+
+    
+
+    <input type="submit" value="Register" class="btn btn-primary" />
+    <input type="button" value="Reset" class="btn btn-primary" />
+</form>
+

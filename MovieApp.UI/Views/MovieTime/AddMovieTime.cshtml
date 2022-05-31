@@ -1,0 +1,43 @@
+﻿@model MyMovieApp.Entity.MovieShowTime
+
+
+@{
+    ViewData["Title"] = "AddMovieTime";
+}
+
+<h1>Welcome to Add Movie Time Page</h1>
+
+<hr />
+<form method="post">
+    <div class="form-group">
+        <label>Select Movie</label>
+        <select asp-for="MovieId" asp-items="@(new SelectList(ViewBag.movieList,"Value","Text"))" class="form-control"></select>
+    </div>
+
+    <div class="form-group">
+        <label>Select Thetre</label>
+       <select asp-for="TheatreId" asp-items="@(new SelectList(ViewBag.thetreList,"Value","Text"))" class="form-control"></select>
+    </div>
+
+    <div>
+        <lable>ShowTime</lable>
+        <input type="time" class="form-control" asp-for="ShowTime" />
+    </div>
+    <div>
+        <lable>Date</lable>
+        <input type="date" class="form-control" asp-for="Date" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+
+    <button type="reset" class="form-control">Clear</button>
+
+    @if (ViewBag.status == "Success")
+    {
+        <div class="alert alert-success">@ViewBag.message</div>
+    }
+    else if (ViewBag.status == "Error")
+    {
+        <div class="alert alert-danger">@ViewBag.message</div>
+    }
+</form>

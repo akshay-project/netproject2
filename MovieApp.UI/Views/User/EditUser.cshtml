@@ -1,0 +1,47 @@
+﻿@model MyMovieApp.Entity.UserModel;
+@{
+    ViewData["Title"] = "EditUser";
+}
+
+<h1 class="text-center">Edit User</h1>
+<form method="post">
+    <div class="form-group">
+        <label>
+            First Name
+        </label>
+        <input type="text" class="form-control" asp-for="FirstName"/>
+    </div>
+
+    <div class="form-group">
+        <label>
+            Last Name
+        </label>
+        <input type="text" class="form-control" asp-for="LastName" />
+    </div>
+
+    <div class="form-group">
+        <label>
+            Email
+        </label>
+        <input type="text" class="form-control" asp-for="Email"/>
+    </div>
+
+    
+
+    <div class="form-group">
+        <label>
+            Password
+        </label>
+        <input type="text" class="form-control"asp-for="Password"/>
+    </div>
+
+    <div class="form-group">
+        <label>
+            Mobile Name
+        </label>
+        <input type="text" class="form-control" asp-for="Mobile"/>
+    </div>
+
+    <input type="submit" value="Updates" class="btn btn-primary" />
+    <input type="button" value="Reset" class="btn btn-primary" />
+</form>

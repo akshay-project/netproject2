@@ -1,0 +1,29 @@
+﻿
+
+
+<h1>TheaterDelete</h1>
+
+
+@model MyMovieApp.Entity.ThetreModel;
+@{
+    ViewData["Title"] = "TheaterDelete";
+}
+
+<h1 class="text-center">Delete Theater</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label>
+            Theater Title
+        </label>
+        <input type="text" class="form-control" asp-for="Name" disabled="disabled" />
+    </div>
+
+    
+
+
+    
+
+    <input type="submit" value="Deletes" class="btn btn-primary" />
+    <input type="button" value="Reset" class="btn btn-primary" />
+</form>
